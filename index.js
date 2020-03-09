@@ -62,4 +62,12 @@ const start=() => {
         }
     })
 }
-    
+// creating functions to perform the actions of the menu 
+function employeeViewAll () {
+connection.query("SELECT * FROM employees", function(err, res) {
+    if (err) throw err;
+    // Log all results of the SELECT statement
+     console.log(res);
+    connection.end();
+    });
+}
