@@ -5,12 +5,12 @@ USE CMS_db;
 
 CREATE TABLE departments (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30)
+    name VARCHAR(30) NOT NULL
 );
 CREATE TABLE roles (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL (6,3) NOT NULL,
+    salary DECIMAL(10,3) NOT NULL,
     department_id INT
 );
 CREATE TABLE employees (
